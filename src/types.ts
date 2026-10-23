@@ -83,3 +83,22 @@ export interface PlatformConfig {
   steps: RecoveryStep[];
   postSecurityChecklist: SecurityCheckItem[];
 }
+
+export interface SecurityAlert {
+  id: string;
+  title: string;
+  body: string;
+  date: string;
+  type: 'critical' | 'update' | 'tip';
+  platform?: PlatformId;
+  linkText?: string;
+  actionUrl?: string;
+  read?: boolean;
+}
+
+export interface NotificationSettings {
+  enabled: boolean;
+  criticalAlerts: boolean;
+  platformUpdates: boolean;
+  securityTips: boolean;
+}

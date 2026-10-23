@@ -19,6 +19,7 @@ import { AllPlatformsOverview } from './components/AllPlatformsOverview';
 import { PostRecoverySecurity } from './components/PostRecoverySecurity';
 import { OfficialLinksCard } from './components/OfficialLinksCard';
 import { ScamWarning } from './components/ScamWarning';
+import { NotificationCenter } from './components/NotificationCenter';
 import { Footer } from './components/Footer';
 
 export default function App() {
@@ -45,6 +46,9 @@ export default function App() {
             window.scrollTo({ top: 120, behavior: 'smooth' });
           }} 
         />
+
+        {/* Push Notification Center & Security Alerts */}
+        <NotificationCenter />
 
         {/* Owner Contact Card (Phone +967785502919, Email, Websites, Telegram Bot) */}
         <OwnerContactCard />
